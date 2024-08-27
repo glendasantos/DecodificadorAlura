@@ -27,3 +27,11 @@ function criptografaTexto(acao) {
   document.getElementById("botao-copiar").style.display = "flex";
 }
 
+function botaoCopiar() {
+
+  var content = document.getElementById("area-de-texto-2-2");
+
+  navigator.clipboard.writeText(content.innerHTML);
+  alert("Texto Copiado")
+
+}

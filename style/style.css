@@ -22,9 +22,17 @@
     --fonte-principal: "Inter", sans-serif;
 }
 
+html{
+    width: 1400px;
+    height: 1024px;
+    top: 622px;
+    left: -2277px;
+}
+
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -76,14 +84,15 @@ body {
     font-size: 32px;
 }
 
+
 .botoes {
     width: 680px;
-    height: 67px;
+    height: auto;
     top: 885px;
     left: 240px;
     gap: 24px;
     font-family: "Inter", sans-serif;
-    font-size: .6rem;
+    font-size: 1.6rem;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -98,6 +107,7 @@ body {
     gap: 8px;
     background-color: #0A3871;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 #botao-criptografar:hover {
@@ -113,6 +123,7 @@ body {
     gap: 8px;
     background-color: #D8DFE8;
     color: #0A3871;
+    cursor: pointer;
 }
 
 #botao-descriptografar:hover {
@@ -120,14 +131,12 @@ body {
 }
 
 .instrucao {
-    width: 690px;
+    width: 400px;
     height: 18px;
-    /* top: 851px;
-    left: 240px; */
     gap: 8px;
     opacity: 80%;
-    color: #495057;
-    font-family: "Inter", sans-serif;
+    color: var(--gray-400);
+    font-family: var(--fonte-principal);
     font-size: 12px;
     line-height: 18px;
     justify-content: space-between;
@@ -205,8 +214,10 @@ body {
 
 .botao-copiar {
     display: none;
-    width: 328px;
+    width: 336px;
     height: 67px;
+    top: 885px;
+    left: 1032px;
     border-radius: 24px;
     border: 1px solid #0A3871;
     padding: 24px;
@@ -214,18 +225,12 @@ body {
     background-color: #D8DFE8;
     color: #0A3871;
     text-align: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.botao-limpar {
-    display: none;
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    border: 1px solid #0A3871;
-    padding: 24px;
-    gap: 8px;
-    background-color: #D8DFE8;
-    color: #0A3871;
+#botao-copiar:hover {
+    transform: scale(1.02);
 }
 
 .nome {
@@ -253,7 +258,7 @@ body {
 
 }
 
-@media only screen and (max-width:320px) { /*Phone*/
+@media only screen and (max-width:450px) { /*Phone*/
 
     * {
         margin: 0;
@@ -337,10 +342,15 @@ body {
     
 }
 
-@media only screen and (min-width:321px) and (max-width:768px){ /*Table 
+@media only screen and (min-width:768px) and (max-width:1024px){ /*Table 
     */
     * {
         flex-direction: column;
+        justify-content: center;
+    }
+
+    body {
+        justify-content: center;
     }
 
     .container {
@@ -349,10 +359,26 @@ body {
         flex-wrap: wrap;
         padding: 10%;
         gap: 32px;
+        justify-content: center;
     }
 
     #imagem {
+        display: none;
+    }
+    
+    .caixa.texto {
        display: none;
+       width: 688px;
+       height: 133px;
+       top: 1001px;
+       left: 40px;
+       border-radius: 32px;
+       padding: 32px;
+       gap: 32px;
+       margin-top: 4rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
     }
 
     .area-de-texto-1 {
@@ -388,7 +414,6 @@ body {
     
     .botoes {
         flex-direction: row;
-        flex-direction: column;
         gap: 24px;
         width: 100%; 
         max-width: 343px;
